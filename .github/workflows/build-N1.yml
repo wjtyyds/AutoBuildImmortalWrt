@@ -239,7 +239,7 @@ jobs:
           echo "file=$ROOTFS_FILE" >> $GITHUB_OUTPUT
 
       - name: Package armsr-armv8 as ImmortalWrt for N1
-        uses: wjtyyds/flippy-openwrt-actions@dev
+        uses: wukongdaily/flippy-openwrt-actions@master
         if: ${{ steps.down.outputs.status }} == 'success' && !cancelled()
         env:
           OPENWRT_ARMVIRT: ${{ steps.find_rootfs.outputs.file }}
