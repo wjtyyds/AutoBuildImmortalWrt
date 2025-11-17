@@ -16,7 +16,7 @@ on:
       openwrt_kernel:
         description: "选择构建的内核(斐讯N1)"
         required: false
-        default: "6.6.93"
+        default: "6.12.57"
         type: choice
         options:
           - 5.4.291
@@ -129,7 +129,7 @@ on:
         description: |
           是否编译 Docker 插件
         required: true
-        default: 'no'
+        default: 'yes'
         type: choice
         options:
           - 'yes'
@@ -147,7 +147,7 @@ on:
       replace_banner:
         description: '替换为ImmortalWrt的banner信息'
         required: false
-        default: false
+        default: true
         type: boolean
       rootfs_partsize:
         description: '软件包大小1G固定'
@@ -159,7 +159,7 @@ on:
       builder_name:
         description: "设置打包作者的名称"
         required: true
-        default: 'wukongdaily'
+        default: 'wjtyyds'
 
 jobs:
   build:
